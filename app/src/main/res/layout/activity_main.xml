@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="center|center_vertical"
+    android:gravity="center_vertical"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <ScrollView
+        android:id="@+id/main"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="none"
+        android:visibility="visible">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="45dp"
+                android:layout_marginEnd="15dp"
+                app:cardElevation="10dp">
+
+                <ImageView
+                    android:id="@+id/productName"
+                    android:layout_width="match_parent"
+                    android:layout_height="450dp"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/placeholdar">
+
+                </ImageView>
+
+            </androidx.cardview.widget.CardView>
+
+
+            <EditText
+                android:id="@+id/name"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="10dp"
+                android:background="@drawable/boarder"
+                android:ems="10"
+                android:hint="Product Name"
+                android:inputType="text"
+                android:padding="10dp"
+                android:textSize="20sp" />
+
+            <Spinner
+                android:id="@+id/spinner"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/boarder"
+                android:layout_width="match_parent"
+                android:padding="15dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_height="wrap_content" />
+
+            <EditText
+                android:id="@+id/price"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="10dp"
+                android:background="@drawable/boarder"
+                android:ems="10"
+                android:hint="Price"
+                android:inputType="numberDecimal"
+                android:padding="10dp"
+                android:textSize="20sp" />
+
+            <EditText
+                android:id="@+id/discount"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="10dp"
+                android:background="@drawable/boarder"
+                android:ems="10"
+                android:hint="Discount"
+                android:inputType="numberDecimal"
+                android:padding="10dp"
+                android:textSize="20sp" />
+
+
+            <EditText
+                android:id="@+id/disc"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="10dp"
+                android:background="@drawable/boarder"
+                android:ems="10"
+                android:gravity="start|top"
+                android:hint="Description"
+                android:inputType="textMultiLine"
+                android:minHeight="120dp"
+                android:padding="10dp"
+                android:textSize="20sp" />
+
+            <Button
+                android:id="@+id/addProduct"
+                style="@style/Widget.Material3.Button.OutlinedButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="10dp"
+                android:padding="10dp"
+                android:text="Add Product"
+                android:textColor="#F4511E"
+                android:textSize="20sp"
+                app:strokeColor="#F4511E"
+                app:strokeWidth="3dp" />
+
+        </LinearLayout>
+    </ScrollView>
+
+    <com.github.ybq.android.spinkit.SpinKitView
+        android:id="@+id/spin_kit"
+        style="@style/SpinKitView.Large.Circle"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_gravity="center"
+        android:visibility="gone"
+        app:SpinKit_Color="#F4511E" />
+
+</LinearLayout>
